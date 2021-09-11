@@ -1,0 +1,176 @@
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Roboto Condensed', sans-serif;*/
+
+:root{
+  --black:  #000;
+  --grey:   #404040;
+  --yellow: #FAE34E;
+  --blue:   #0080B9;
+  --red:    #FB021D;
+  --white:  #F3F3F3;
+  --separation: 20px;
+}
+
+body{
+  margin: 0;
+}
+
+h1, h2, h3{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+div{
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+
+/* image handling */
+figure{
+  text-align: center;
+  margin:  0;
+}
+
+figcaption{
+  padding: 1em;
+  padding-right:  1em;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
+}
+
+img{
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 700px;
+}
+
+
+/* horizontally stacked grid */
+.container-h{
+  display: grid;
+  grid-template-rows: 2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+      "left center right";
+  }
+
+/* a centered grid */
+.centered {
+  grid-template-columns: 1fr var(--separation) 1fr;
+}
+
+/* a left skewed grid */
+.lefty {
+    grid-template-columns: 2fr var(--separation) 1fr;
+}
+
+/* a right skewed grid */
+.righty {
+    grid-template-columns: 1fr var(--separation) 2fr;
+}
+
+/* left container */
+.left {
+    grid-area: left;
+
+}
+
+/* center container */
+.center {
+    background: var(--grey);
+    grid-area: center;
+
+}
+
+/* right container */
+.right {
+    grid-area: right;
+
+}
+
+/* vertically stacked grid */
+.container-v{
+  display: grid;
+  grid-template-columns: 2fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas:
+      "top" 
+      "hline"
+      "bottom";
+  grid-template-rows: 1fr var(--separation) 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+.top{grid-area: top;}
+.hline{grid-area: hline; background: var(--grey);}
+.bottom{grid-area: bottom;}
+
+
+/* stretch the container so that the line stack vertically */
+.decorative{
+  padding: 0;
+  width: calc(100% + var(--separation));
+}
+/* for the rare case that you want to put content in a decorative <div> */
+.in-decorative{
+  width: calc(100% - var(--separation));
+}
+
+
+.make-container-v{
+  height: 100%;
+}
+
+.text{
+  padding: var(--separation);
+}
+
+.bold{
+  font-weight: bold;
+}
+
+
+
+/* substituted by <hr> */
+.bottom {
+    grid-area: bottom;
+    background: var(--grey);
+}
+
+hr{
+  border: 0;
+  margin: 0;
+  height: var(--separation);
+  background: var(--grey);
+}
+
+
+
+/* colors for the cells */
+
+.red{
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.blue{
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.yellow{
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.white{
+  background-color: var(--white);
+  color: var(--black);
+}
