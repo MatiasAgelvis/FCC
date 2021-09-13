@@ -1,0 +1,73 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center">Letter to Santa Claus</h1>
+        <p id="description" class="description text-center">
+            FIll your details to send your letter instantaneously to the north pole
+        </p>
+    </header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+            <input type="number" name="age" id="number" min="0" max="150" class="form-control" placeholder="Age" />
+        </div>
+        <div class="form-group">
+            <p>Where you Naughty or Nice this year?</p>
+            <label><input name="behaviour" value="nice" type="radio" class="input-radio" checked />Nice</label>
+            <label><input name="behaviour" value="naughty" type="radio" class="input-radio" />Naughty</label>
+            <label><input name="behaviour" value="not-sure" type="radio" class="input-radio" />Not sure</label>
+        </div>
+        <div class="form-group">
+            <p>
+                What is your favorite Santa's reindeer?
+            </p>
+            <select id="dropdown" name="fav-reindeer" class="form-control" required>
+                <option disabled selected value>Select your favorite reindeer</option>
+                <option value="blitzen">Blitzen</option>
+                <option value="comet">Comet</option>
+                <option value="cupid">Cupid</option>
+                <option value="dancer">Dancer</option>
+                <option value="dasher">Dasher</option>
+                <option value="donner">Donner</option>
+                <option value="prancer">Prancer</option>
+                <option value="rudolph">Rudolph</option>
+                <option value="vixen">Vixen</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>
+                What decorations do you have in your home?
+                <span class="clue">(Check all that apply)</span>
+            </p>
+            <label><input name="prefer" value="angels" type="checkbox" class="input-checkbox" />Angels</label>
+            <label><input name="prefer" value="christmas-linens" type="checkbox" class="input-checkbox" />Christmas Sheets</label>
+            <label><input name="prefer" value="christmas-tableware" type="checkbox" class="input-checkbox" />Christmas Tableware</label>
+            <label><input name="prefer" value="christmas-tree" type="checkbox" class="input-checkbox" />Christmas Tree</label>
+            <label><input name="prefer" value="mistletoe" type="checkbox" class="input-checkbox" />Mistletoe</label>
+            <label><input name="prefer" value="nativity-scene" type="checkbox" class="input-checkbox" />Nativity Scene</label>
+            <label><input name="prefer" value="nutcracker" type="checkbox" class="input-checkbox" />Nutcracker</label>
+            <label><input name="prefer" value="poinsettia" type="checkbox" class="input-checkbox" />Poinsettia</label>
+            <label><input name="prefer" value="snowmen" type="checkbox" class="input-checkbox" />Snowmen</label>
+            <label><input name="prefer" value="stockings" type="checkbox" class="input-checkbox" />Stockings</label>
+            <label><input name="prefer" value="string-lights" type="checkbox" class="input-checkbox" />String Lights</label>
+            <label><input name="prefer" value="wreath" type="checkbox" class="input-checkbox" />Wreath</label>
+        </div>
+        <div class="form-group">
+            <p>Which are your holiday wishes?</p>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
