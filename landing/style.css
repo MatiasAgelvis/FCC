@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Dancing+Script&family=Roboto+Slab&family=Sacramento&display=swap');
+/*
+fonts
+  font-family: 'Allison', cursive;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Sacramento', cursive;
+*/
+
+body{
+  margin: 0;
+}
+
+/* -------- header -------- */
+
+header {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+
+.logo{
+  border: solid 0.5rem;
+  padding: 0.2rem;
+  margin: 0.5rem;
+  margin-left: 2rem;
+  font-size: 4rem;
+
+}
+.logo > span
+{
+  font-size: 4rem;
+}
+
+/* -------- body -------- */
+
+.blob { 
+  background-image: url(images/magicpattern-blob-1631718796885.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70%;
+  text-align: center;
+}
+
+.blob > img
+{
+  /*width: 50%;*/
+  max-height: 70vh;
+}
+
+.flexy{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+}
+
+#hero{
+  margin: 1rem;
+}
