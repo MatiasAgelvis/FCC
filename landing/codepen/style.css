@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Dancing+Script&family=Roboto+Slab&family=Sacramento&display=swap');
+/*
+fonts
+  font-family: 'Allison', cursive;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Sacramento', cursive;
+*/
+
+:root {
+    --color-white: #FFF;
+    --color-blue: #1B1EDB;
+    --color-black: #000;
+    --color-gold: #988861;
+    --color-clear-grey: #EEE;
+    --color-dark-grey: #8C8F8B;
+    --border: 0.5rem;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* -------- header -------- */
+
+header {
+    position: fixed;
+/*     position: static; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-clear-grey);
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  z-index: 9999;
+}
+
+.logo {
+    border: solid var(--border);
+    padding: 0.2rem;
+    margin: 0.5rem;
+    background-color: var(--color-white);
+    margin-left: 2rem;
+/*     font-size: 4rem; */
+}
+
+@media (max-width: 720px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 10px 0 10px 0;
+    }
+}
+
+.logo>span {
+    font-size: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+nav ul li {
+    padding: 1rem;
+    text-decoration-thickness: 3px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: 'Roboto Slab', serif;
+    font-size: larger;
+    color: var(--color-black);
+}
+
+nav ul li:hover {
+    border: solid var(--border);
+    padding: 0.2rem;
+    margin: 0.3rem;
+    background-color: var(--color-white);
+}
+
+/* -------- body -------- */
+
+.blob {
+    background-image: url(https://raw.githubusercontent.com/MatiasAgelvis/FCC/main/landing/images/magicpattern-blob-1631718796885.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.blob>img {
+    padding: 0 7rem 0 7rem;
+    max-height: 70vh;
+    max-width: 70vw;
+    object-fit: scale-down;
+}
+
+.flexy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-content: stretch;
+    width: 100%;
+}
+
+#hero-text {
+    font-family: 'Dancing Script', cursive;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    transform: rotate(-9deg);
+}
+
+section {
+    margin: 1rem;
+    padding-left: 10vw;
+}
+
+#hero {
+    padding-left: 0;
+  margin-top: 150px;
+}
+
+section h2 {
+    border-bottom-style: solid;
+    border-color: var(--color-gold);
+}
+
+#features {}
+
+#section h2 {
+    border-bottom-style: solid;
+    border-color: var(--color-gold);
+}
+
+#features ul {
+    text-transform: capitalize;
+}
+
+#features li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: large;
+    list-style: square;
+}
+
+.video-container {
+    background-image: url(images/SR - allradios tr1.com_crop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    padding-bottom: 44.25%;
+    padding-top: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .video-container {
+        margin-left: 0%;
+        margin-right: 5%;
+    }
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container figure img {
+    width: 100%;
+    max-height: 70vh;
+    max-width: 70vw;
+}
+
+
+/*  ------------- product ------------- */
+
+.product {
+    text-align: center;
+    font-size: larger;
+}
+
+.product-title {
+    font-family: 'Dancing Script', cursive;
+    word-break: keep-all;
+}
+
+.product button, #submit{
+    font-size: large;
+    background-color: var(--color-clear-grey);
+}
+
+.product button:hover, #submit:hover{
+    cursor: pointer;
+    background-color: var(--color-white);
+    border: solid 2px;
+}
+
+.product #dropdown label{
+    font-size: large;
+    display: inline-block;
+}
+
+.product select{
+    font-size: large;
+}
+
+.product-image{
+    width: 100%;
+    object-fit: contain;
+    max-height: 300px;
+}
+
+.product-description{
+    width: 50%;
+    margin: auto;
+}
+
+.product-description div{
+    margin: 0.5rem;
+}
+
+#form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+#form input{
+    font-size: large;
+}
+
+#email{
+    width: 70%;
+}
+
+@media (max-width: 700px) {
+    #form {
+        width: 90%;
+    }
+}
