@@ -52,6 +52,7 @@ header {
 
 @media (max-width: 720px) {
     header {
+     position: static; 
         flex-direction: column;
         align-items: center;
     }
