@@ -1,0 +1,271 @@
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<body>
+    <nav id="navbar">
+        <div class="sticky-nav">
+            <header><a href="#navbar">Guide to writing documentation</a></header>
+            <ul>
+                <li><a class="nav-link" href="#Why_write_docs">Why write docs</a></li>
+                <li><a class="nav-link" href="#You_want_people_to_use_your_code">You want people to use your code</a></li>
+                <li><a class="nav-link" href="#You_want_people_to_help_out">You want people to help out</a></li>
+                <li><a class="nav-link" href="#You_want_your_code_to_be_better">You want your code to be better</a></li>
+                <li><a class="nav-link" href="#You_want_to_be_a_better_writer">You want to be a better writer</a></li>
+                <li><a class="nav-link" href="#Version_controlled_plain_text">Version controlled plain text</a></li>
+                <li><a class="nav-link" href="#Basic_Example">Basic Example</a></li>
+                <li><a class="nav-link" href="#README">README</a></li>
+                <li><a class="nav-link" href="#What_to_write">What to write</a></li>
+                <li><a class="nav-link" href="#What_problem_your_project_solves">What problem your project solves</a></li>
+                <li><a class="nav-link" href="#A_small_code_example">A small code example</a></li>
+                <li><a class="nav-link" href="#A_link_to_your_code_&_issue_tracker">A link to your code & issue tracker</a></li>
+                <li><a class="nav-link" href="#Frequently_Asked_Questions_(FAQ)">Frequently Asked Questions (FAQ)</a></li>
+                <li><a class="nav-link" href="#How_to_get_support">How to get support</a></li>
+                <li><a class="nav-link" href="#Information_for_people_who_want_to_contribute_back">Information for people who want to contribute back</a></li>
+                <li><a class="nav-link" href="#Installation_instructions">Installation instructions</a></li>
+                <li><a class="nav-link" href="#Your_project’s_license">Your project’s license</a></li>
+                <li><a class="nav-link" href="#Next_Steps">Next Steps</a></li>
+                <li><a class="nav-link" href="#Template">Template</a></li>
+                <li><a class="nav-link" href="#Reference">Reference</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="top-button"><a href="#navbar">Top</a></div>
+    <main id="main-doc">
+        <section id="Why_write_docs" class="main-section">
+            <header>Why write docs</header>
+            <article class="textarea">
+                <p>You will be using your code in 6 months, code that you wrote 6 months ago is often indistinguishable from code that someone else has written. You will look upon a file with a fond sense of remembrance. Then a sneaking feeling of foreboding, knowing that someone less experienced, less wise, had written it.</p>
+                <p>As you go through this selfless act of untangling things that were obvious or clever months ago, you will start to empathize with your users. If only I had written down why I had done this. Life would be so much simpler. Documentation allows you to transfer the why behind code. Much in the same way code comments explain the why, and not the how, documentation serves the same purpose.</p>
+            </article>
+        </section>
+        <section id="You_want_people_to_use_your_code" class="main-section">
+            <header>You want people to use your code</header>
+            <article class="textarea">
+                <p>You have written a piece of code, and released it into the world. You have done this because you think that others might find it useful. However, people need to understand why your code might be useful for them, before they decide to use it. Documentation tells people that this project is for them.</p>
+                <p>There are a small number of people who will source dive and use any code out there. That is a vanishingly small number of people, compared to people who will use your code when properly documented. If you really love your project, document it, and let other people use it.</p>
+            </article>
+        </section>
+        <section id="You_want_people_to_help_out" class="main-section">
+            <header>You want people to help out</header>
+            <article class="textarea">
+                <p>Open source is this magical thing right? You release code, and the code gnomes come and make it better for you.</p>
+                <p>Not quite.</p>
+                <p>There are lots of ways that open source is amazing, but it doesn’t exist outside the laws of physics. You have to put work in, to get work out.</p>
+                <ul>
+                    <li>You only get contributions after you have put in a lot of work.</li>
+                    <li>You only get contributions after you have users.</li>
+                    <li>You only get contributions after you have documentation.</li>
+                </ul>
+                <p>Documentation also provides a platform for your first contributions. A lot of people have never contributed before, and documentation changes are a lot less scary than code changes. If you don’t have documentation, you will miss out on a whole class of contributors.</p>
+            </article>
+        </section>
+        <section id="You_want_your_code_to_be_better" class="main-section">
+            <header>You want your code to be better</header>
+            <article class="textarea">
+                <p>It’s really easy to have an idea in your head that sounds perfect, but the act of putting words to paper requires a distillation of thought that may not be so easy.</p>
+                <p>Writing documentation improves the design of your code. Talking through your API and design decisions on paper allows you to think about them in a more formalized way. A nice side effect is that it allows people to contribute code that follows your original intentions as well.</p>
+            </article>
+        </section>
+        <section id="You_want_to_be_a_better_writer" class="main-section">
+            <header>You want to be a better writer</header>
+            <article class="textarea">
+                <p>Writing documentation is a different form of writing than most people have experience with. Technical writing is an art that doesn’t come naturally. Writing documentation will start you down the road to being a better technical writer, which is a useful skill to have as a programmer.</p>
+                <p>Writing also becomes easier over time. If you don’t write for many months, it is a lot harder to start writing again. Keeping your projects documented will keep you writing at a reasonable cadence.</p>
+                <p>Starting simple is the best way to achieve actual results. I will present a well-paved path to walk down, and after you have the basic idea, you can expand your scope. The tools should be powerful and easy to use. This removes obstacles to actually putting words on the page.</p>
+            </article>
+        </section>
+        <section id="Version_controlled_plain_text" class="main-section">
+            <header>Version controlled plain text</header>
+            <article class="textarea">
+                <p>As programmers we live in a world of plain text. Our documentation tooling should be no exception. We want tools that turn plain text into pretty HTML. We also have some of the best tooling available for tracking changes to files. Why would we forgo using those tools when writing documentation? This workflow is powerful, and familiar to developers.</p>
+            </article>
+        </section>
+        <section id="Basic_Example" class="main-section">
+            <header>Basic Example</header>
+            <article class="textarea">
+                <pre><code>Resources
+---------
+
+* Online documentation: http://docs.writethedocs.org/
+* Conference: http://conf.writethedocs.org/
+```
+
+This will render into a header, with a list underneath it. The URLs will be hyperlinked automatically. It’s easy to write, still makes sense as plain text, and renders nicely into HTML.
+
+</code></pre>
+            </article>
+        </section>
+        <section id="README" class="main-section">
+            <header>README</header>
+            <article class="textarea">
+                <p>Your first steps in documentation should go into your README. Code hosting services will render your README into HTML automatically if you provide the proper extension. It is also the first interaction that most users will have with your project. So having a solid README will serve your project well.</p>
+                <p>Some people even go as far as to start your project with a README</p>
+            </article>
+        </section>
+        <section id="What_to_write" class="main-section">
+            <header>What to write</header>
+            <article class="textarea">
+                <p>Now we’re getting down to the brass tacks. Making sure that you give your users all the information that they need, but not too much.</p>
+                <p>First, you need to ask yourself who you’re writing for. At first, you generally just need to appeal to two audiences:
+                    <ul>
+                        <li>Users</li>
+                        <li>Developers</li>
+                    </ul>
+                </p>
+                <p>Users are people who simply want to use your code, and don’t care how it works. Developers are people who want to contribute back to your code.</p>
+            </article>
+        </section>
+        <section id="What_problem_your_project_solves" class="main-section">
+            <header>What problem your project solves</header>
+            <article class="textarea">
+                <p>A lot of people will come to your docs trying to figure out what exactly your project is. Someone will mention it, or they’ll google a phrase randomly. You should explain what your project does and why it exists. Fabric does a great job of this.</p>
+            </article>
+        </section>
+        <section id="A_small_code_example" class="main-section">
+            <header>A small code example</header>
+            <article class="textarea">
+                <p>Show a telling example of what your project would normally be used for. Requests does a great example of this.</p>
+            </article>
+        </section>
+        <section id="A_link_to_your_code_&_issue_tracker" class="main-section">
+            <header>A link to your code & issue tracker</header>
+            <article class="textarea">
+                <p>People like to browse the code sometimes. They might be interested in filing bugs against the code for issues they’ve found. Make it really easy for people who want to contribute back to the project in any way possible. I think the Python Guide does a good job with the link to the code portion.</p>
+            </article>
+        </section>
+        <section id="Frequently_Asked_Questions_(FAQ)" class="main-section">
+            <header>Frequently Asked Questions (FAQ)</header>
+            <article class="textarea">
+                <p>A lot of people have the same problems. If things happen all the time, you should probably fix your documentation or the code, so that the problems go away. However, there are always questions that get asked about your project, things that can’t be changed, etc. Document those, and keep it up to date. FAQs are generally out of date, but when done well, they are a golden resource. Tastypie did a great job with this, with their “Cookbook” concept.</p>
+            </article>
+        </section>
+        <section id="How_to_get_support" class="main-section">
+            <header>How to get support</header>
+            <article class="textarea">
+                <p>Mailing list? IRC Channel? Document how to get help and interact with the community around a project. Django does a great job with this.</p>
+            </article>
+        </section>
+        <section id="Information_for_people_who_want_to_contribute_back" class="main-section">
+            <header>Information for people who want to contribute back</header>
+            <article class="textarea">
+                <p>People usually have standards for how they expect things to be done in their projects. You should document these so that if people write code, they can do things in the norm of the project. Open Comparison does a great job of this.</p>
+            </article>
+        </section>
+        <section id="Installation_instructions" class="main-section">
+            <header>Installation instructions</header>
+            <article class="textarea">
+                <p>Once people figure out whether they want to use your code or not, they need to know how to actually get it and make it run. Hopefully your install instructions should be a couple lines for the basic case. A page that gives more information and caveats should be linked from here if necessary. I think at Read the Docs we do a good job with this.</p>
+            </article>
+        </section>
+        <section id="Your_project’s_license" class="main-section">
+            <header>Your project’s license</header>
+            <article class="textarea">
+                <p>BSD? MIT? GPL? This stuff might not matter to you, but the people who want to use your code will care about this a whole lot. Think about what you want to accomplish with your license, and please only pick one of the standard licenses that you see around the web.</p>
+            </article>
+        </section>
+        <section id="Next_Steps" class="main-section">
+            <header>Next Steps</header>
+            <article class="textarea">
+                <p>After you follow the above guide, we know your project will be successful! For further reading, check out this post on how to maintain an open source project.</p>
+            </article>
+        </section>
+        <section id="Template" class="main-section">
+            <header>Template</header>
+            <article class="textarea">
+                </p>A simple template for you to start with, for your README. Name the file README.md if you want to use markdown, or README.rst if you want to use reStructuredText. More information about these can be found in the sidebar on markup.</p>
+                <pre><code>$project
+========
+
+$project will solve your problem of where to start with documentation,
+by providing a basic explanation of how to do it easily.
+
+Look how easy it is to use:
+
+    import project
+    # Get your stuff done
+    project.do_stuff()
+
+Features
+--------
+
+- Be awesome
+- Make things faster
+
+Installation
+------------
+
+Install $project by running:
+
+    install project
+
+Contribute
+----------
+
+- Issue Tracker: github.com/$project/$project/issues
+- Source Code: github.com/$project/$project
+
+Support
+-------
+
+If you are having issues, please let us know.
+We have a mailing list located at: project@google-groups.com
+
+License
+-------
+
+The project is licensed under the BSD license.
+    </code>
+</pre>
+            </article>
+        </section>
+        <section id="Reference" class="main-section">
+            <header>Reference</header>
+            <article class="textarea">
+                <p>Use one asterisk (<code>*text*</code>) for italics
+                    Use two asterisks (<code>**text**</code>) for bolding
+                    Use two backticks (<code>``text``</code>) for code samples.
+                    Links to external sites contain the link text and a bracketed URL in backticks, followed by an underscore: <code>`Link to Write the Docs <https://www.writethedocs.org/>`_ </code>. </p> <p>Headers are demarcated by non-alphanumeric characters like dashes, equal signs, or tildes. Use the same character for headers at the same level. The following creates a header:
+                            <pre><code>===============
+Chapter 1
+===============
+</code></pre>
+                            If inserted in the same document, this creates a header at a different level:
+                            <pre><code>Section 1.1
+------------------
+</code></pre>
+                            Having an underline-only is acceptable, as is having both an underline and an overline. If you use the same non-alphanumeric character for underline-only and underline-and-overline headers, they will be considered to be at different levels.</p>
+                The row of non-alphanumeric characters should have at least as long as the header text.
+                <p>For enumerated lists, use a number or letter followed by a period, or followed by a right-bracket, or surrounded by brackets:
+                    <pre><code>1. Use this format the numbers in your list like 1., 2., etc.
+
+A. To make items in your list go like A., B., etc. Both uppercase and lowercase letters are acceptable.
+
+I. Roman numerals are also acceptable, uppercase or lowercase.
+
+(1) Numbers in brackets are acceptable.
+
+1) So are numbers followed by a bracket.
+</code></pre>
+                </p>
+                <p>For bulleted lists, use indentation to indicate the level of nesting of a bullet point. You can use -, +, or * as a bullet point character:
+                    <pre><code>* Bullet point
+
+  - nested bullet point
+
+    + even more nested bullet point
+</code></pre>
+                </p>
+                <p>Code Samples
+                    To display code samples, or any text that should not be formatted, end the paragraph prior to the code sample with two colons (::) and indent the code sample:
+                    <pre><code>This is the paragraph preceding the code sample::
+
+  #some sample code
+</code></pre>
+                </p>
+                <p>All the documentation in this page is taken from
+                    <a href="https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/" target="_blank">Write the Docs</a></p>
+            </article>
+        </section>
+    </main>
+</body>

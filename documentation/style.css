@@ -1,0 +1,165 @@
+/* ------- common ------- */
+
+:root {
+    --color-primary: darkblue;
+    --color-secondary: darkgreen;
+    --color-text: midnightblue;
+    --color-background: floralwhite;
+
+    --font-header: x-large;
+    --font-large: larger;
+    --font-normal: large;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: var(--font-normal);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* ------- navbar ------- */
+
+#navbar {
+    width: 25vw;
+}
+
+#navbar .sticky-nav{
+    border: solid 3px var(--color-primary);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    max-height: 99vh;
+    overflow-y: scroll;
+}
+
+#navbar header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    color: var(--color-background);
+    background: var(--color-primary);
+    font-size: larger;
+    text-transform: capitalize;
+    border-radius: 0;
+}
+#navbar header a{
+        text-decoration: none;
+        color: var(--color-background);
+    }
+#navbar header a:hover {
+        text-decoration: underline;
+    }
+
+
+#navbar ul{
+    padding-left: 1.5rem;
+}
+
+#navbar ul li {
+    list-style-type: "\23  ";
+    color: var(--color-secondary);
+    padding: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+#navbar ul li a:hover {
+    text-decoration: underline;
+    color: var(--color-secondary);
+}
+
+/* ------- text ------- */
+
+#main-doc{
+    height: fit-content;
+    margin-top: 3rem;
+}
+
+#main-doc section{
+    margin-left: 0.5rem;
+}
+
+#main-doc header{
+    font-size: var(--font-header);
+    color: var(--color-secondary);
+    border-bottom: solid 3px;
+    margin-left: 3rem;
+    padding-right: 1rem;
+}
+
+#main-doc .textarea {
+    max-width: 70vw;
+    padding: 1rem;
+    text-align: justify;
+}
+
+#main-doc pre {
+    background: lightgrey;
+}
+
+#main-doc code {
+    /*width: 100%;*/
+    /*display: block;*/
+    white-space: pre-wrap;
+    background: lightgrey;
+}
+
+
+.top-button{
+        display: block;
+        position: fixed;
+        right: 0;
+        bottom: 2rem;
+        width: 3rem;
+        text-align: center;
+        background: var(--color-primary);
+        /*padding: 0.5rem 1rem 0.5rem 0.5rem;*/
+        padding: 0.3rem;
+        border-radius: 3px 0px 0px 3px;
+    }
+
+.top-button a{
+        text-decoration: none;
+        color: var(--color-background);
+    }
+.top-button:hover {
+        text-decoration: underline;
+    }
+/* ------- mobile ------- */
+
+@media (max-width:  799px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    #navbar{
+        width: 100%;
+        /*max-height: 50vh;*/
+        margin-bottom: 2rem;
+    }
+
+    #navbar .sticky-nav{
+        max-height: 50vh;
+    }
+
+    #main-doc{
+        margin-top: 0;
+    }
+
+    #main-doc .textarea {
+        max-width: 88vw;
+        padding: 1rem;
+    }
+}
