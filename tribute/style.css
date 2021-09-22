@@ -174,3 +174,19 @@ hr{
   background-color: var(--white);
   color: var(--black);
 }
+
+
+@media (max-width: 600px){
+  html{
+    font-size: larger;
+  }
+  #img-div-container{
+    width: 200px;
+  }
+}
+
+@media (max-width: 350px){
+  #img-div-container{
+    width: 175px;
+  }
+}
