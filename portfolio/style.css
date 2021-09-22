@@ -130,22 +130,6 @@ header {
     margin-right: 2rem;
 }
 
-@media (max-width: 650px) {
-    .nav {
-        margin: 0 0 4px 0;
-        padding: 2px 10px 2px 10px;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        padding: 0;
-        text-align: -webkit-right;
-        text-align: right;
-        margin: 0;
-        align-items: flex-end;
-    }
-}
-
 .nav-list li {
     width: fit-content;
     margin: auto 1rem auto 1rem;
@@ -156,6 +140,35 @@ header {
     display: inline-block;
     width: auto;
     height: 11vh;
+}
+
+@media (max-width: 650px) {
+    .nav {
+        margin: 0 0 4px 0;
+        padding: 2px 10px 2px 10px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 340px) {
+    .nav #title {
+        font-size: 22.5px;
+    }
+
+    .nav-guard {
+        display: none;
+    }
+
+    .nav {
+        max-height: 20vh;
+        position: unset;
+    }
 }
 
 /* --------- sections --------- */
@@ -186,7 +199,7 @@ section header {
 
 .welcome-section h1 {
     /*font-size: 19vw;*/
-    font-size: clamp(19vw, 19vw, 15em);
+    font-size: clamp(18vw, 19vw, 15em);
     /* padding: 1em 1em; */
     line-height: 1.4em;
     margin-top: 5vh;
@@ -196,8 +209,8 @@ section header {
 
 .welcome-section p {
     /*font-size: 12vw;*/
-    font-size: clamp(9vw, 12vw, 7em);
-     padding: 0 0.5em; 
+    font-size: clamp(8vw, 12vw, 7em);
+    padding: 0 0.5em;
     color: white;
     text-decoration: underline;
     text-decoration-color: var(--color-red);
@@ -210,7 +223,17 @@ section header {
     background: var(--color-blue);
 }
 
+@media (max-width: 340px) {
+    .welcome-section h1 {
+        font-size: clamp(18vw, 18vw, 15em);
+    }
 
+    .welcome-section p {
+        /*font-size: 12vw;*/
+        font-size: clamp(8vw, 11vw, 7em);
+        padding: 0;
+    }
+}
 
 /* --------- projects --------- */
 
@@ -331,12 +354,13 @@ section header {
     }
 
     .card .title {
-    box-sizing: border-box;
-    writing-mode: unset;}
+        box-sizing: border-box;
+        writing-mode: unset;
+    }
 
     .card-left .title {
-    transform: rotate(0deg);
-}
+        transform: rotate(0deg);
+    }
 
 
 }
@@ -405,4 +429,3 @@ footer a {
     color: white;
     text-decoration: ;
 }
-
