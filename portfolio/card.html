@@ -1,0 +1,157 @@
+<style type="text/css">
+
+:root{
+    --border-radius: 10px;
+    --boder-width: 4px;
+    --title-border-width: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    margin: 1rem;
+    box-sizing: border-box;
+
+    border: solid var(--boder-width) black;
+    border-radius: var(--border-radius);
+
+    overflow: hidden;
+
+    /* set the size */
+    width: 600px;
+    height: 300px;
+}
+
+.card-right {
+    grid-template-columns: 2fr 0.5fr;
+    grid-template-areas: "content title";
+    border-right-width: var(--title-border-width);
+}
+
+.card-left {
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-areas: "title content";
+    border-left-width: var(--title-border-width);
+}
+
+.content {
+    box-sizing: border-box;
+    position: relative;
+
+    grid-area: content;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.content img{
+    object-fit: scale-down;
+    max-width: 100%;
+    
+    /* can be removed to make images fill the whole card */
+    max-height: 100%;
+
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.title {
+    box-sizing: border-box;
+
+    grid-area: title;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 2em 20px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    border-left: solid var(--boder-width) black;
+}
+
+.card-left .title{
+    transform: rotate(180deg);
+}
+
+
+</style>
+
+<div class='container'>
+
+    <div class="card card-left">
+        <div class="title">
+            stormtrooper figure walking on sand
+        </div>
+        <div class="content">
+            <img src="https://unsplash.com/photos/cPF2nlWcMY4/download?force=true&w=640">
+        </div>
+    </div>
+
+    <div class="card card-right">
+        <div class="title">
+            selective focus photo of wheat plant
+        </div>
+        <div class="content">
+            <img src="https://unsplash.com/photos/kPhtyge_OKM/download?force=true&w=640">
+        </div>
+    </div>
+
+
+
+    <div class="card card-left">
+        <div class="title">
+            black and white bird in thee branch
+        </div>
+        <div class="content">
+            <img src="https://unsplash.com/photos/Q1U9cPnlE1s/download?force=true&w=640">
+        </div>
+    </div>
+
+    <div class="card card-right">
+        <div class="title">
+            person running near white painted wall
+        </div>
+        <div class="content">
+            <img src="https://unsplash.com/photos/ToE5tPDqUjo/download?force=true&w=640">
+        </div>
+    </div>
+
+
+
+    <div class="card card-left">
+        <div class="title">
+            purple and white flower petals
+        </div>
+        <div class="content">
+            <img src="https://unsplash.com/photos/orweuNeiO9w/download?force=true&w=640">
+        </div>
+    </div>
+
+    <div class="card card-right">
+        <div class="title">
+            Closed red book
+        </div>
+        <div class="content">
+            <img src="https://unsplash.com/photos/w7C39ujHP5U/download?force=true&w=640">
+        </div>
+    </div>
+
+</div>
+
+
+
