@@ -157,12 +157,14 @@ hr{
 
 .red{
   background-color: var(--red);
-  color: var(--white);
+  /*color: var(--white);*/
+  color: white;
 }
 
 .blue{
   background-color: var(--blue);
-  color: var(--white);
+  /*color: var(--white);*/
+  color: white;
 }
 
 .yellow{
