@@ -33,6 +33,7 @@ font-family: 'Montserrat', sans-serif;
     --title-border-width: 10px;
 
     --font-outline: 2px;
+    --font-size-header: clamp(6vw, 9vw, 7em);
 }
 
 body {
@@ -183,6 +184,8 @@ header {
 
 section {
     border-bottom: solid var(--line-width) var(--color-green);
+    /*background-image: url('images/background.png');*/
+    /*background-size: cover;*/
 }
 
 section header {
@@ -190,7 +193,7 @@ section header {
     text-align: center;
     /*font-size: 4em;*/
     /*font-size: 14vw;*/
-    font-size: clamp(7vw, 14vw, 9em);
+    font-size: var(--font-size-header);
     background: white;
     text-decoration: underline;
     text-decoration-color: var(--color-yellow);
@@ -202,33 +205,34 @@ section header {
     font-family: 'Rubik Mono One', monospaced;
     font-weight: bolder;
     text-align: center;
-    background: var(--color-blue);
+    background-color: var(--color-blue);
 }
 
 .welcome-section h1 {
     /*font-size: 19vw;*/
-    font-size: clamp(18vw, 19vw, 15em);
+    font-size: var(--font-size-header);
     /* padding: 1em 1em; */
     line-height: 1.4em;
-    margin-top: 5vh;
+    margin: 5vh 0;
     color: white;
     text-align: center;
 }
 
 .welcome-section p {
     /*font-size: 12vw;*/
-    font-size: clamp(8vw, 12vw, 7em);
-    padding: 0 0.5em;
+    font-size: 7vw;
+    padding: 0.5em 0.5em;
+    margin: 0;
     color: white;
-    text-decoration: underline;
-    text-decoration-color: var(--color-red);
+    /*text-decoration: underline;*/
+    /*text-decoration-color: var(--color-red);*/
 }
 
 .outline {
     /*-webkit-text-stroke: 1px white;*/
     text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
     color: var(--color-blue);
-    background: var(--color-blue);
+    /*background: var(--color-blue);*/
 }
 
 @media (max-width: 900px) {
@@ -246,7 +250,7 @@ section header {
 /* --------- projects --------- */
 
 .projects-section {
-    background: var(--color-yellow);
+    background-color: var(--color-yellow);
 }
 
 .projects-section header {
@@ -376,7 +380,8 @@ section header {
 /* -------- contact --------- */
 
 .contact-section {
-    background: var(--color-green);
+    background-color: var(--color-green);
+    background-position-y: -376px;
 }
 
 .contact-section header {
