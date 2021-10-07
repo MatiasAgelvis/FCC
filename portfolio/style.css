@@ -231,7 +231,7 @@ section header {
     background: var(--color-blue);
 }
 
-@media (max-width: 340px) {
+@media (max-width: 900px) {
     .welcome-section h1 {
         font-size: clamp(18vw, 18vw, 15em);
     }
