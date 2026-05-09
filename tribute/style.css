@@ -3,13 +3,13 @@
 /*font-family: 'Roboto Condensed', sans-serif;*/
 
 :root{
-  --black:  #000;
-  --grey:   #404040;
-  --yellow: #FAE34E;
-  --blue:   #0080B9;
-  --red:    #FB021D;
-  --white:  #F3F3F3;
-  --separation: 20px;
+  --black:  #1a1a1b;
+  --grey:   #2d2c2e;
+  --yellow: #fac901;
+  --blue:   #225095;
+  --red:    #dd0100;
+  --white:  #f2f5f1;
+  --separation: 15px;
 }
 
 body{
