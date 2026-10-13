@@ -1,13 +1,18 @@
 # Pages
 
-Websites created for the FreeCodeCamp Responsive Web Desing Course.
+Websites created for the FreeCodeCamp Responsive Web Design Course.
 
-1. [Tribute to Piet Mondrian](https://matiasagelvis.github.io/FCC/tribute/)
+## Live site
 
-1. [Launch page of the Regency TR-1](https://matiasagelvis.github.io/FCC/landing/)
+Pushing to `main` deploys this repository to GitHub Pages via the
+[`deploy`](.github/workflows/deploy.yml) workflow.
 
-1. [Online Letter to Santa](https://matiasagelvis.github.io/FCC/form/)
+1. [Tribute to Piet Mondrian](tribute/)
 
-1. [Documentation (about documentations)](https://matiasagelvis.github.io/FCC/documentation/)
+1. [Launch page of the Regency TR-1](landing/)
 
-1. [Portfolio](https://matiasagelvis.github.io/FCC//portfolio/)
+1. [Online Letter to Santa](form/)
+
+1. [Documentation (about documentations)](documentation/)
+
+1. [Portfolio](portfolio/)
