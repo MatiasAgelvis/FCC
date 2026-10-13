@@ -173,7 +173,7 @@ section h2 {
 }
 
 .video-container {
-    background-image: url(images/SR - allradios tr1.com_crop.png);
+    background-image: url("images/SR - allradios tr1.com_crop.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
