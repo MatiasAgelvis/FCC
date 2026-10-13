@@ -125,7 +125,7 @@ img{
   gap: 0px 0px;
   grid-auto-flow: column;
   grid-template-areas:
-      "top" 
+      "top"
       "hline"
       "bottom";
   grid-template-rows: 1fr var(--separation) 1fr;
